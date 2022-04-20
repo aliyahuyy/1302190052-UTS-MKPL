@@ -5,14 +5,10 @@ import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Employee {
+public class Employee extends data{
 
-	private String employeeId;
-	private String firstName;
-	private String lastName;
-	private String idNumber;
-	private String address;
-	
+	private data pegawai;
+
 	private int yearJoined;
 	private int monthJoined;
 	private int dayJoined;
@@ -31,12 +27,12 @@ public class Employee {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 	
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
-		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
+	public Employee(data pegawai,  int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
+		this.setEmployeeId(pegawai.getEmployeeId());
+		this.setFirstName(pegawai.getFirstName());
+		this.setLastName(pegawai.getLastName());
+		this.setIdNumber(pegawai.getIdNumber());
+		this.setAddress(pegawai.getAddress());
 		this.yearJoined = yearJoined;
 		this.monthJoined = monthJoined;
 		this.dayJoined = dayJoined;
